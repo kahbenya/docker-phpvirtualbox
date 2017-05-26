@@ -6,9 +6,9 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -y \
   wget unzip php5-cli
 
 # install phpvirtualbox
-RUN wget http://sourceforge.net/projects/phpvirtualbox/files/phpvirtualbox-4.3-1.zip/download -O phpvirtualbox-4.3-1.zip
-RUN unzip phpvirtualbox-4.3-1.zip
-RUN mv phpvirtualbox-4.3-1 /var/www
+RUN wget https://sourceforge.net/projects/phpvirtualbox/files/phpvirtualbox-5.0-5.zip/download -O phpvirtualbox.zip
+RUN unzip phpvirtualbox.zip
+RUN mv phpvirtualbox /var/www
 ADD config.php /var/www/config.php
 RUN chown www-data:www-data -R /var/www
 
